@@ -1,0 +1,365 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+section {
+    padding: 20px;
+    margin-bottom: 10px; /* Adds space between sections */
+    scroll-margin-top: 50px;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+ #home, #about, #skills, #projects, #contact {
+    clear: both; /* Ensures sections do not overlap */
+  }
+
+/* Header */
+#header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.nav-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-menu ul {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    float: right;
+}
+
+.nav_menu_list li {
+    margin: 0 15px;
+    float: right;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    color:pink;
+}
+
+.active-link {
+    border-bottom: 2px solid #FFD700;
+}
+
+
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  
+}
+.home-content {
+  flex: 1;
+}
+h2{
+  color: green;
+}
+.colored-text {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.colored-text span {
+  display: inline-block;
+  animation: colorChange 3s infinite alternate;
+}
+
+@keyframes colorChange {
+  0% { color: red; }
+  20% { color: orange; }
+  40% { color:  palevioletred; }
+  60% { color: green; }
+  80% { color: blue; }
+  100% { color: violet; }
+}
+
+.home-content p {
+  font-size: 18px;
+  margin: 20px 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+.profile-pic-container {
+  flex: 1;
+  position: relative;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .home-section {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .home-content {
+      margin-bottom: 30px;
+  }
+
+  .profile-pic-container {
+      margin-top: 20px;
+  }
+}
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.3s;
+  background-color: blueviolet;
+}
+
+.blue-btn {
+  background-color: #ff0099;
+  color: white;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.skills-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-center {
+    text-align: center;
+    margin-bottom: 40px;
+    color: blue;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90px;
+}
+
+.icon-container i {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.icon-container p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.progress-bar-container {
+    flex-grow: 1;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 20px;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #4caf50; /* Green color for the progress bar */
+    border-radius: 10px;
+}
+.skill-container{
+    width: 200px;
+    height: 150px;
+    float: left;
+}
+#projects .container {
+    padding: 20px;
+  }
+  
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Adjust the gap between cards */
+  }
+  
+  .project-card {
+    flex: 1 1 calc(30% - 20px); /* 3 cards per row with space in between */
+    height: 350px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  .projects-container :hover{
+    background-color: #ff6b6b;
+
+  }
+  
+  .project-card h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: rebeccapurple;
+  }
+  
+  .project-card .card-body {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .project-card {
+      flex: 1 1 100%; /* Full width on smaller screens */
+      height: auto; 
+    }
+  }
+  
+  #contact .container {
+    padding: 20px;
+  }
+  
+  .contact-form {
+    max-width: 600px; /* Adjust width as needed */
+    margin: 0 auto; /* Center the form */
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input, 
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .form-group textarea {
+    resize: vertical; /* Allow vertical resizing of the textarea */
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* Light text color */
+    padding: 20px 0; /* Padding for spacing */
+    text-align: center; /* Center text */
+  }
+  
+  .footer-content {
+    max-width: 1100px;
+    margin: 0 auto; /* Center content */
+  }
+  
+  .footer-text {
+    margin-bottom: 10px;
+  }
+  
+  .footer-contact a {
+    color: #ff6b6b; /* Highlighted email link color */
+    text-decoration: none;
+  }
+  
+  .footer-contact a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .social-icons {
+    margin: 15px 0; /* Spacing for icons */
+  }
+  
+  .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    color: #ff6b6b; /* Change icon color on hover */
+  }
+  
+  footer p, footer a {
+    font-size: 16px; /* Font size for text */
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      padding: 0 20px;
+    }
+  }
+  
+  
