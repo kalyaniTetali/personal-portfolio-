@@ -24,73 +24,73 @@ html, body {
     clear: both; /* Ensures sections do not overlap */
   }
 
-/* Header */
-#header {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-.nav-name {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.nav-menu ul {
-    list-style: none;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    float: right;
-}
-
-.nav_menu_list li {
-    margin: 0 15px;
-    float: right;
-}
-
-.nav-link {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.nav-link:hover {
-    color:pink;
-}
-
-
-/* Mobile styles */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
+  /* Header */
+  #header {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
   }
-
-  .nav-links li {
-    padding: 10px 0;
+  .nav-name {
+      font-size: 16px;
+      font-weight: bold;
   }
-
-  .nav-links a {
-    font-size: 18px; /* Adjust the font size for smaller screens */
-  }
-}
-
-
-.home-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 40px;
   
-}
-.home-content {
-  flex: 1;
-}
+  .nav-menu ul {
+      list-style: none;
+      text-decoration: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      float: right;
+  }
+  
+  .nav_menu_list li {
+      margin: 0 15px;
+      float: right;
+  }
+  
+  .nav-link {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+  }
+  
+  .nav-link:hover {
+      color:pink;
+  }
+  
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-links li {
+      padding: 10px 0;
+    }
+  
+    .nav-links a {
+      font-size: 18px; /* Adjust the font size for smaller screens */
+    }
+  }
+  .home-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    
+  }
+  .home-content {
+    flex: 1;
+  } 
 h2{
   color: green;
 }
