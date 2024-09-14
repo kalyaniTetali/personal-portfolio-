@@ -14,6 +14,12 @@ section {
   html {
     scroll-behavior: smooth;
   }
+  /* Prevent horizontal overflow */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
  #home, #about, #skills, #projects, #contact {
     clear: both; /* Ensures sections do not overlap */
   }
@@ -58,11 +64,22 @@ section {
 }
 
 
+/* Mobile styles */
 @media (max-width: 768px) {
-  #header {
-    padding: 0 20px;
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    padding: 10px 0;
+  }
+
+  .nav-links a {
+    font-size: 18px; /* Adjust the font size for smaller screens */
   }
 }
+
 
 .home-section {
   display: flex;
