@@ -28,9 +28,8 @@ section {
     align-items: center;
     
 }
-
 .nav-name {
-    font-size: 24px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -58,10 +57,12 @@ section {
     color:pink;
 }
 
-.active-link {
-    border-bottom: 2px solid #FFD700;
-}
 
+@media (max-width: 768px) {
+  #header {
+    padding: 0 20px;
+  }
+}
 
 .home-section {
   display: flex;
@@ -150,6 +151,7 @@ h2{
   border: none;
   cursor: pointer;
   font-size: 16px;
+  color: #e0e0e0;
   transition: transform 0.3s;
   background-color: blueviolet;
 }
