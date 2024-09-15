@@ -7,6 +7,17 @@ document.querySelectorAll('nav a').forEach(anchor => {
   });
 });
 
+function toggleMenu() {
+  const menu = document.getElementById("myNavMenu");
+  menu.classList.toggle("active");
+}
+
+document.querySelectorAll(".nav_menu_list a").forEach(anchor => {
+  anchor.addEventListener("click", () => {
+      const menu = document.getElementById("myNavMenu");
+      menu.classList.remove("active");
+  });
+});
   // Initialize EmailJS
 (function() {
   emailjs.init("xj7efNniBuD0irVxX");  // Replace with your EmailJS Public Key
