@@ -18,30 +18,16 @@ document.querySelectorAll(".nav_menu_list a").forEach(anchor => {
       menu.classList.remove("active");
   });
 });
-  // Initialize EmailJS
-(function() {
-  emailjs.init("xj7efNniBuD0irVxX");  // Replace with your EmailJS Public Key
-})();
 
-// Handle form submission
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-  event.preventDefault();  // Prevent default form submission
+window.addEventListener('scroll', function() {
+  const contactSection = document.querySelector('#contact .content');
+  const contactPosition = contactSection.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight / 1.3; // Trigger when it's visible enough
 
-  // Collect the form data
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
-
-  // Send email via EmailJS
-  emailjs.send("service_lrn86kx", "template_nev3d2a", {
-    name: name,
-    email: email,
-    message: message
-  })
-  .then(function(response) {
-    alert("Message sent successfully!");  // Show success message
-  }, function(error) {
-    alert("Failed to send message: " + error);  // Show error message
-    alert("Failed to send message. Check console for details.");
-  });
+  if (contactPosition < screenPosition) {
+    document.querySelector('.matter').style.transform = 'translateX(0)';
+    document.querySelector('.matter').style.opacity = '1';
+    document.querySelector('.contact-form').style.transform = 'translateX(0)';
+    document.querySelector('.contact-form').style.opacity = '1';
+  }
 });
